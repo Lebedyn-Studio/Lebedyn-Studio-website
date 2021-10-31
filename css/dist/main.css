@@ -5,6 +5,24 @@ body {
   background-color: #151a21;
 }
 
+body::-webkit-scrollbar {
+  background-color: #1d2026;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #0e0b0b;
+  border: 1px solid #20232a;
+  border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1d2026;
+}
+
+body::-webkit-scrollbar-button {
+  background-color: #1d2026;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -192,6 +210,13 @@ main .image-section .image-block:hover .image-section-text {
 main .about-us {
   margin-top: 20%;
 }
+main .about-us .image-section {
+  justify-content: center;
+  width: 90%;
+}
+main .about-us .image-section .image-block:first-child {
+  margin-left: 10%;
+}
 main .about-us:hover .article hr {
   width: 30%;
 }
@@ -241,6 +266,54 @@ main .our-team .image-section .image-block .under-image-text p {
   font-style: italic;
 }
 main .our-team:hover .article hr {
+  width: 30%;
+}
+main .our-work .article {
+  margin-bottom: 5%;
+}
+main .our-work .work-all {
+  margin: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+main .our-work .work-all .first-work-block {
+  margin-right: 2%;
+}
+main .our-work .work-all .work-block .another-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #20232a;
+  margin-top: 4%;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+main .our-work .work-all .work-block .another-block .image-section {
+  flex-basis: 90%;
+  margin: 5%;
+}
+main .our-work .work-all .work-block .another-block .image-section img {
+  width: 90%;
+  width: 200px;
+  height: 150px;
+}
+main .our-work .work-all .work-block .another-block .text-section {
+  padding-right: 5%;
+}
+main .our-work .work-all .work-block .another-block .text-section h5 {
+  text-align: center;
+  color: #88bef5;
+  font-size: 18pt;
+  margin: 5px;
+}
+main .our-work .work-all .work-block .another-block .text-section p {
+  color: #fcefee;
+}
+main .our-work .work-all .work-block:hover .another-block {
+  transform: translate3d(10px, -10px, 0);
+  box-shadow: 10px 10px 0 #0e0b0b;
+}
+main .our-work:hover .article hr {
   width: 30%;
 }
 
