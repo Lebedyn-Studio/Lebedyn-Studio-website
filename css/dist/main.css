@@ -20,7 +20,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-button {
-  background-color: #1d2026;
+  display: none;
 }
 
 header {
@@ -157,7 +157,6 @@ main .image-section {
   display: flex;
   justify-content: center;
   margin-top: 3%;
-  cursor: pointer;
   transition: transform 0.2s linear;
   width: 100%;
 }
@@ -169,6 +168,7 @@ main .image-section .image-block {
 }
 main .image-section .image-block .image {
   width: 100%;
+  cursor: pointer;
   transition: transform 0.2s linear;
   background: linear-gradient(45deg, #30cfd0, #330867);
 }
@@ -220,54 +220,6 @@ main .about-us .image-section .image-block:first-child {
 main .about-us:hover .article hr {
   width: 30%;
 }
-main .our-team .image-section .image-block {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 25%;
-  position: relative;
-}
-main .our-team .image-section .image-block .image img {
-  height: 100%;
-}
-main .our-team .image-section .image-block .image-section-text {
-  top: 40%;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  flex-direction: row;
-}
-main .our-team .image-section .image-block .image-section-text a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  width: 45px;
-  height: 45px;
-  border: 1px solid #071a52;
-  background-color: #88bef5;
-  color: #0e0b0b;
-  transition: opacity 0.2s linear;
-  transition: transform 0.2s linear;
-}
-main .our-team .image-section .image-block .image-section-text a:hover {
-  background-color: #071a52;
-  color: #fcefee;
-}
-main .our-team .image-section .image-block .under-image-text {
-  text-align: center;
-  color: #fcefee;
-}
-main .our-team .image-section .image-block .under-image-text h6 {
-  font-size: 22pt;
-  margin: 0;
-  margin-top: 5%;
-}
-main .our-team .image-section .image-block .under-image-text p {
-  font-style: italic;
-}
-main .our-team:hover .article hr {
-  width: 30%;
-}
 main .our-work .article {
   margin-bottom: 5%;
 }
@@ -314,6 +266,103 @@ main .our-work .work-all .work-block:hover .another-block {
   box-shadow: 10px 10px 0 #0e0b0b;
 }
 main .our-work:hover .article hr {
+  width: 30%;
+}
+main .our-team .image-section .image-block {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 25%;
+  position: relative;
+}
+main .our-team .image-section .image-block .image img {
+  height: 100%;
+}
+main .our-team .image-section .image-block .image-section-text {
+  top: 40%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: row;
+}
+main .our-team .image-section .image-block .image-section-text a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #071a52;
+  background-color: #88bef5;
+  color: #0e0b0b;
+  transition: opacity 0.2s linear;
+  transition: transform 0.2s linear;
+}
+main .our-team .image-section .image-block .image-section-text a:hover {
+  background-color: #071a52;
+  color: #fcefee;
+}
+main .our-team .image-section .image-block .under-image-text {
+  text-align: center;
+  color: #fcefee;
+}
+main .our-team .image-section .image-block .under-image-text h6 {
+  font-size: 22pt;
+  margin: 0;
+  margin-top: 5%;
+}
+main .our-team .image-section .image-block .under-image-text p {
+  font-style: italic;
+  color: #30cfd0;
+}
+main .our-team:hover .article hr {
+  width: 30%;
+}
+main .our-blog {
+  margin-top: 5%;
+}
+main .our-blog .blog-all .blog-block .blog {
+  width: 100%;
+  background-color: #1d2026;
+  border-radius: 10px;
+  padding: 2%;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+main .our-blog .blog-all .blog-block .blog h4 {
+  margin: 0;
+  font-size: 24pt;
+  color: #88bef5;
+  margin-bottom: 2%;
+}
+main .our-blog .blog-all .blog-block .blog p {
+  margin: 0;
+}
+main .our-blog .blog-all .blog-block .blog p a {
+  color: #30cfd0;
+  text-decoration: none;
+}
+main .our-blog .blog-all .blog-block .blog .date {
+  font-size: 10pt;
+  color: #30cfd0;
+  margin-bottom: 1%;
+}
+main .our-blog .blog-all .blog-block .blog .blog-article {
+  color: #fcefee;
+}
+main .our-blog .blog-all .blog-block:nth-child(1) {
+  margin: 2% 20% 5% 5%;
+}
+main .our-blog .blog-all .blog-block:nth-child(2) {
+  margin: 0% 5% 5% 20%;
+}
+main .our-blog .blog-all .blog-block:nth-child(3) {
+  margin: 0% 10% 5% 10%;
+}
+main .our-blog .blog-all .blog-block:hover .blog {
+  transform: translate3d(10px, -10px, 0);
+  box-shadow: 10px 10px 0 #0e0b0b;
+}
+main .our-blog:hover .article hr {
   width: 30%;
 }
 
