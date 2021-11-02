@@ -28,6 +28,7 @@ header {
   width: 100%;
   background-color: #88bef5;
   z-index: 999;
+  box-shadow: 0px 5px 20px #0e0b0b;
 }
 header .all-header-content {
   display: flex;
@@ -75,6 +76,27 @@ header .all-header-content nav .social-list {
 }
 header .all-header-content nav .social-list ul li {
   margin-right: 30%;
+}
+
+.article {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fcefee;
+}
+.article .first-string {
+  font-size: 28pt;
+  margin-bottom: 1%;
+}
+.article hr {
+  border: 1px solid #88bef5;
+  background-color: #88bef5;
+  width: 20%;
+  margin: 0;
+  border-color: #88bef5;
+  transition: all 0.2s linear;
 }
 
 main .header-img {
@@ -132,26 +154,6 @@ main .text button:hover {
   color: #0e0b0b;
   border: 2px solid #0e0b0b;
   box-shadow: 0px 0px 10px 5px #88bef5;
-}
-main .article {
-  margin-top: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fcefee;
-}
-main .article .first-string {
-  font-size: 28pt;
-  margin-bottom: 1%;
-}
-main .article hr {
-  border: 1px solid #88bef5;
-  background-color: #88bef5;
-  width: 20%;
-  margin: 0;
-  border-color: #88bef5;
-  transition: all 0.2s linear;
 }
 main .image-section {
   display: flex;
@@ -368,4 +370,138 @@ main .our-blog:hover .article hr {
 
 main:hover .text hr {
   width: 35%;
+}
+
+footer .all-content {
+  display: flex;
+  margin-top: 5%;
+}
+footer .all-content h4 {
+  color: #88bef5;
+  font-size: 24pt;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 5%;
+}
+footer .all-content .first-section {
+  flex-basis: 30%;
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+}
+footer .all-content .first-section .aside-text {
+  color: gray;
+}
+footer .all-content .first-section hr {
+  width: 100%;
+  background-color: #88bef5;
+  border: 0.5px solid #88bef5;
+  margin-top: 5%;
+}
+footer .all-content .first-section .social {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer .all-content .first-section .social p {
+  color: #30cfd0;
+}
+footer .all-content .first-section .social a {
+  text-decoration: none;
+}
+footer .all-content .first-section .social a i {
+  transition: all 0.1s;
+  color: #fcefee;
+  font-size: 18pt;
+  margin-right: 5%;
+}
+footer .all-content .first-section .social a:hover i {
+  color: #30cfd0;
+}
+footer .all-content .first-section form {
+  margin-top: 5%;
+}
+footer .all-content .first-section form button {
+  width: 30%;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  height: 40px;
+  background-color: #88bef5;
+  color: #fcefee;
+  font-weight: bold;
+  border: 1px solid #0e0b0b;
+  border-radius: 0px 5px 5px 0px;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+footer .all-content .first-section form input {
+  width: 60%;
+  font-family: sans-serif;
+  height: 36px;
+  border: 1px solid #0e0b0b;
+  text-align: center;
+  background-color: #20232a;
+  color: white;
+  margin-right: -5px;
+  border-radius: 5px 0px 0px 5px;
+}
+footer .all-content .first-section form button:hover {
+  background-color: #30cfd0;
+}
+footer .all-content .first-section .mail {
+  display: flex;
+}
+footer .all-content .first-section .mail p {
+  color: #fcefee;
+}
+footer .all-content .first-section .mail p:first-child {
+  margin-right: 5%;
+  color: #88bef5;
+}
+footer .all-content .first-section .mail p:last-child {
+  text-decoration: underline;
+  cursor: pointer;
+}
+footer .all-content .first-section .mail p:last-child:hover {
+  color: #30cfd0;
+}
+footer .all-content .second-section {
+  flex-basis: 30%;
+  margin: 1%;
+  margin-top: 0;
+}
+footer .all-content .second-section h4 {
+  margin-bottom: 5%;
+}
+footer .all-content .second-section .column {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-bottom: 1%;
+}
+footer .all-content .second-section .column img {
+  width: 25%;
+  margin-right: 1%;
+}
+footer .all-content .third-section {
+  flex-basis: 30%;
+}
+footer .all-content .third-section .all-news .news {
+  background-color: #1d2026;
+  padding: 5%;
+  margin-bottom: 2%;
+}
+footer .all-content .third-section .all-news .news .header {
+  font-size: 16pt;
+  color: #88bef5;
+  margin: 0;
+}
+footer .all-content .third-section .all-news .news .date {
+  margin: 0;
+  color: gray;
+}
+footer .all-content .third-section .all-news .news .news-article {
+  color: #fcefee;
 }
