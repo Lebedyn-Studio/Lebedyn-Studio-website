@@ -43,6 +43,7 @@ header{
     width: 100%;
     background-color: $header-color;
     z-index: 999;
+    box-shadow: 0px 5px 20px $first-text-color;
     .all-header-content{
         display: flex;
         justify-content: center;
@@ -98,7 +99,30 @@ header{
     }
 }
 
-//main
+// article section
+
+.article{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $second-text-color;
+    .first-string{
+        font-size: 28pt;
+        margin-bottom: 1%;
+    }
+    hr{
+        border: 1px solid $header-color;
+        background-color: $header-color;
+        width: 20%;
+        margin: 0;
+        border-color: $header-color;
+        transition: all 0.2s linear;
+    }
+}
+
+// main
 
 main{
 
@@ -163,30 +187,6 @@ main{
             box-shadow: 0px 0px 10px 5px $header-color;
         }
     }
-
-// article section
-
-    .article{
-        margin-top: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: $second-text-color;
-        .first-string{
-            font-size: 28pt;
-            margin-bottom: 1%;
-        }
-        hr{
-            border: 1px solid $header-color;
-            background-color: $header-color;
-            width: 20%;
-            margin: 0;
-            border-color: $header-color;
-            transition: all 0.2s linear;
-        }
-    }
-
 
 //  all image section
 
@@ -455,6 +455,148 @@ main:hover{
     .text{
         hr{
             width: 35%;
+        }
+    }
+}
+
+// footer
+
+footer{
+    .all-content{
+        display: flex;
+        margin-top: 5%;
+        h4{
+            color:$header-color;
+            font-size: 24pt;
+            text-transform: uppercase;
+            margin: 0;
+            text-align: center;
+            margin-bottom: 5%;
+        }
+        .first-section{
+            flex-basis: 30%;
+            margin-left: 5%;
+            display: flex;
+            flex-direction: column;
+            .aside-text{
+                color: gray;
+            }
+            hr{
+                width: 100%;
+                background-color: $header-color;
+                border: 0.5px solid $header-color;
+                margin-top: 5%;
+            }
+            .social{
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                p{
+                    color: $third-text-color;
+                }
+                a{
+                    text-decoration: none;
+                    i{
+                        transition: all 0.1s;
+                        color: $second-text-color;
+                        font-size: 18pt;
+                        margin-right: 5%;
+                    }
+                }
+                a:hover{
+                    i{
+                        color: $third-text-color;
+                    }
+                }
+            }
+            form{
+                margin-top: 5%;
+                button{
+                    width: 30%;
+                    font-family: sans-serif;
+                    text-transform: uppercase;
+                    height: 40px;
+                    background-color: $header-color;
+                    color: $second-text-color;
+                    font-weight: bold;
+                    border: 1px solid $first-text-color;  
+                    border-radius: 0px 5px 5px 0px;  
+                    cursor: pointer;
+                    transition: all 0.1s;
+                }
+                input{
+                    width: 60%;
+                    font-family: sans-serif;
+                    height: 36px;
+                    border: 1px solid $first-text-color;
+                    text-align: center;
+                    background-color: $second-background-color;
+                    color: white;
+                    margin-right: -5px;
+                    border-radius: 5px 0px 0px 5px;
+                }
+                button:hover{
+                    background-color: $third-text-color;
+                }
+            }
+            .mail{
+                display: flex;
+                p{
+                    color: $second-text-color;
+                }
+                p:first-child{
+                    margin-right: 5%;
+                    color: $header-color;
+                }
+                p:last-child{
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+                p:last-child:hover{
+                    color: $third-text-color;
+                }
+            }
+        }
+        .second-section{
+            flex-basis: 30%;
+            margin: 1%;
+            margin-top: 0;
+            h4{
+                margin-bottom: 5%;
+            }
+            .column{
+                display: flex;
+                justify-content: center;
+                height: 100px;
+                margin-bottom: 1%;
+                img{
+                    width: 25%;
+                    margin-right: 1%;
+                }
+            }
+        }
+        .third-section{
+            flex-basis: 30%;
+            .all-news{
+                .news{
+                    background-color: $first-background-color;
+                    padding: 5%;
+                    margin-bottom: 2%;
+                    .header{
+                        font-size: 16pt;
+                        color: $header-color;
+                        margin: 0;
+                    }
+                    .date{
+                        margin: 0;
+                        color: gray;
+                    }
+                    .news-article{
+                        color: $second-text-color;
+                    }
+                }
+            }
         }
     }
 }
