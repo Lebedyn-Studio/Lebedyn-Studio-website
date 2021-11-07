@@ -962,6 +962,7 @@ footer:hover{
                 }
             }
             nav{
+                display: none;
                 .main-list{
                     margin-top: 40%;
                     margin-left: 20%;
@@ -992,11 +993,15 @@ footer:hover{
             h2{
                 margin-top: 40%;
             }
+            .header-info{
+                width: 100%;
+            }
         }
         button{
             display: none;
         }
         .about-us{
+            margin-top: 25%;
             .image-section{
                 flex-direction: column;
                 margin-right: 15%;
@@ -1034,6 +1039,38 @@ footer:hover{
                 .blog-block:nth-child(3){
                     margin-right: 7%;
                     margin-left: 5%;
+                }
+            }
+        }
+    }
+}
+
+//for 620
+
+@media (max-width: 620px){
+    header{
+        .all-header-adaptive-content{
+            .active{
+                .toogle::before{
+                    transform: rotate(45deg) translateX(0px);
+                }
+                .toogle::after{
+                    transform: rotate(-45deg) translateX(0px);
+                }
+            }
+        }
+    }
+    main{
+        .our-work{
+            .work-all{
+                .work-block{
+                    .another-block{
+                        .image-section{
+                            img{
+                                height: 200px;
+                            }
+                        }
+                    }
                 }
             }
         }
