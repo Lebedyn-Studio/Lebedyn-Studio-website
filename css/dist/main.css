@@ -34,6 +34,7 @@ header .all-header-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 80px;
 }
 header .all-header-content .logo {
   font-size: 18pt;
@@ -43,6 +44,7 @@ header .all-header-content .logo {
   color: #20232a;
   flex-basis: 30%;
   cursor: pointer;
+  text-align: center;
 }
 header .all-header-content nav {
   display: flex;
@@ -649,6 +651,9 @@ footer:hover .article hr {
     margin-left: 5%;
   }
 
+  main .header-img {
+    display: none;
+  }
   main .our-work .work-all {
     flex-direction: column;
     margin-right: 5%;
@@ -670,7 +675,7 @@ footer:hover .article hr {
   }
   main .our-work .work-all .work-block .another-block .image-section img {
     width: 90%;
-    height: 250px;
+    height: 30vh;
   }
 
   footer .all-content .second-section .column {
@@ -721,8 +726,10 @@ footer:hover .article hr {
   }
   header .all-header-adaptive-content {
     display: flex;
+    align-items: center;
     position: relative;
     width: 100%;
+    height: 60px;
   }
   header .all-header-adaptive-content .logo {
     font-size: 18pt;
@@ -734,16 +741,19 @@ footer:hover .article hr {
     padding: 3% 0 3% 5%;
   }
   header .all-header-adaptive-content .nav-toggle {
-    flex-basis: 10%;
+    position: absolute;
+    width: 25px;
+    top: 15px;
+    right: 25px;
+    padding: 15px 0;
+    cursor: pointer;
   }
   header .all-header-adaptive-content .nav-toggle .toogle {
     display: block;
-    width: 4%;
+    width: 100%;
     height: 2px;
-    background-color: #0e0b0b;
+    background-color: #fcefee;
     position: absolute;
-    top: 30px;
-    right: 5%;
     margin: auto;
   }
   header .all-header-adaptive-content .nav-toggle .toogle::before {
@@ -751,7 +761,7 @@ footer:hover .article hr {
     width: 100%;
     height: 2px;
     position: absolute;
-    background-color: #0e0b0b;
+    background-color: #fcefee;
     left: 0;
     z-index: 99;
     top: -8px;
@@ -763,26 +773,25 @@ footer:hover .article hr {
     width: 100%;
     height: 2px;
     position: absolute;
-    background-color: #0e0b0b;
+    background-color: #fcefee;
     left: 0;
     z-index: 99;
     bottom: -8px;
     transition: transform 0.3s linear;
   }
-  header .all-header-adaptive-content .active {
-    display: block;
-  }
   header .all-header-adaptive-content .active .toogle {
     background: none;
-    top: 35px;
   }
   header .all-header-adaptive-content .active .toogle::before {
     transform-origin: left top;
-    transform: rotate(45deg) translateX(-2px);
+    transform: rotate(45deg) translateX(0px);
   }
   header .all-header-adaptive-content .active .toogle::after {
     transform-origin: left bottom;
-    transform: rotate(-45deg) translateX(-2px);
+    transform: rotate(-45deg) translateX(-1px);
+  }
+  header .all-header-adaptive-content nav {
+    display: none;
   }
   header .all-header-adaptive-content nav .main-list {
     margin-top: 40%;
@@ -807,8 +816,21 @@ footer:hover .article hr {
     color: #fcefee;
   }
 
+  main .header-img {
+    display: none;
+  }
+  main .text {
+    height: auto;
+    text-align: center;
+  }
   main .text h2 {
     margin-top: 40%;
+  }
+  main .text h6 {
+    color: #88bef5;
+  }
+  main .text .header-info {
+    width: 100%;
   }
   main button {
     display: none;
@@ -826,6 +848,18 @@ footer:hover .article hr {
   }
   main .about-us .image-section .image-block:first-child {
     margin-left: 0;
+  }
+  main .our-work .work-all .work-block .another-block {
+    margin-top: 10%;
+    margin-bottom: 20%;
+    height: 100%;
+    flex-direction: column;
+  }
+  main .our-work .work-all .work-block .another-block .image-section {
+    padding-top: 5%;
+  }
+  main .our-work .work-all .work-block .another-block .text-section {
+    width: 80%;
   }
   main .our-team .image-section {
     flex-direction: column;
@@ -845,5 +879,21 @@ footer:hover .article hr {
   main .our-blog .blog-all .blog-block:nth-child(3) {
     margin-right: 7%;
     margin-left: 5%;
+  }
+
+  footer .all-content .second-section .column .image-block:first-child {
+    margin-left: 5%;
+  }
+}
+@media (max-width: 620px) {
+  main .our-work .work-all .work-block .another-block .image-section img {
+    height: auto;
+  }
+  main .about-us .image-section .image-block .image img {
+    height: 200px;
+  }
+  main .our-blog .blog-all .blog-block .blog {
+    width: 93%;
+    padding: 5%;
   }
 }
