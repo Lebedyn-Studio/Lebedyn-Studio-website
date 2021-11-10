@@ -75,9 +75,7 @@ header{
                     a{
                         text-decoration: none;
                         color: $footer-color;
-                    }
-                    a:hover{
-                        border-bottom: 2px solid $first-text-color;
+                        transition: all .2s;
                     }
                 }
             }
@@ -203,6 +201,7 @@ main{
     //header text, first information
 
     .text{
+        font-family: 'Lato', sans-serif;
         height: 90vh;
         width: 100%;
         font-size: 32pt;
@@ -211,12 +210,15 @@ main{
         display: flex;
         flex-direction: column;
         align-items: center;
+        
         h2{
             margin-top: 15%;
+            font-family: 'Comfortaa', cursive;
         }
         h6{
             margin: 0;
             color: $second-background-color;
+            font-family: 'Comfortaa', cursive;
         }
         hr{
             width: 25%;
@@ -231,7 +233,8 @@ main{
             width: 60%;
             text-align: center;
             color: $second-text-color;
-            text-shadow: 1px 1px 2px black;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px #000;
         }
         button{
             background-color: $first-background-color;
@@ -671,7 +674,7 @@ footer{
                 }
                 .news-block:hover{
                     .news{
-                        transform: translate3d(10px, -10px, 0);
+                        transform: translate3d(-10px, -10px, 0);
                         box-shadow: 10px 10px 0 $first-text-color;
                     }
                 }
@@ -703,32 +706,37 @@ footer:hover{
 
 // for width 1024
 
-@media (max-width: 1024px){
+@media (max-width: 1025px){
     main{
         .header-img{
-            height: 100%;
+            height: 800px;
         }
         .text{
+            padding-top: 3%;
             h2{
-                font-size: 36pt;
+                font-size: 36px;
             }
             h2{
-                font-size: 30pt;
+                font-size: 30px;
             }
             .header-info{
-                font-size: 26pt;
+                font-size: 26px;
             }
             button{
                 padding: 2%;
-                font-size: 20pt;
+                font-size: 20px;
             }
+        }
+        .about-us{
+            margin-top: 0%;
         }
         .our-work{
             .work-all{
                 .work-block{
                     .another-block{
                         margin-right: 2%;
-                        height: 30vh;
+                        height: 400px;
+
                     }
                 }
             }
@@ -766,7 +774,7 @@ footer:hover{
             .work-all{
                 .work-block{
                     .another-block{
-                        height: 40vh;
+                        height: 40%;
                     }
                 }
             }
@@ -800,6 +808,23 @@ footer:hover{
         }
     }
     main{
+        .text{
+            h2{
+                margin-top: 25%;
+            }
+            h6{
+                color: $header-color;
+            }
+            hr{
+                margin: 5%;
+            }
+            .header-info{
+                color: gray;
+            }
+            button{
+                padding: 3% 5%;   
+            }
+        }
         .header-img{
             display: none;
         }
@@ -822,8 +847,8 @@ footer:hover{
                         .image-section{
                             margin: 1%;
                             img{
-                                width: 90%;
-                                height: 30vh;
+                                width: 70%;
+                                height: 30%;
                             }
                         }
                     }
@@ -858,13 +883,52 @@ footer:hover{
 //for width 820
 
 @media(max-width: 820px){
-    main{
-        .text{
-            h2{
-                margin-top: 25%;
+    header{
+        .all-header-content{
+            .logo{
+                font-size: 18pt;
+                padding-left: 10px;
             }
-            hr{
-                margin: 5%;
+            nav{
+                justify-content: space-between;
+                .main-list{
+                    margin-left: 0;
+                    ul{
+                        margin-left: 0;
+                    }
+                }
+                .social-list{
+                    margin-right: 10%;
+
+                }
+            }
+        }
+    }
+    main{
+        .about-us{
+            margin-top: 5%;
+            .image-section{
+                .image-block{
+                    .image{
+                        img{
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+        .our-work{
+            .work-all{
+                .work-block{
+                    .another-block{
+                        height: 350px;
+                        .image-section{
+                            img{
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
@@ -894,7 +958,7 @@ footer:hover{
     }
 }
 
-// for width 720
+// for width 720 for mobile
 
 @media (max-width: 720px){
     header{
@@ -920,7 +984,7 @@ footer:hover{
             .nav-toggle{
                 position: absolute;
                 width: 25px;
-                top: 15px;
+                top: 12px;
                 right: 25px;
                 padding: 15px 0;
                 cursor: pointer;
@@ -1003,20 +1067,27 @@ footer:hover{
         .text{
             height: auto;
             text-align: center;
+
             h2{
-                margin-top: 40%;
+                margin-top: 45%;
             }
             h6{
                 color: $header-color;
+                margin-top: 5%;
             }
             .header-info{
-                width: 100%;
+                width: 90%;
+                font-size: 16pt;
+                padding: 5%;
+                margin-top: 10%;
+                color: gray;
             }
         }
         button{
             display: none;
         }
         .about-us{
+            margin-top: 2%;
             .image-section{
                 flex-direction: column;
                 margin-right: 15%;
@@ -1037,7 +1108,7 @@ footer:hover{
                 .work-block{
                     .another-block{
                         margin-top: 10%;
-                        margin-bottom: 20%;
+                        margin-bottom: 10%;
                         height: 100%;
                         flex-direction: column;
                         .image-section{
@@ -1047,6 +1118,9 @@ footer:hover{
                             
                             width: 80%;
                         }
+                    }
+                    .another-block{
+                        margin-bottom: 2%;
                     }
                 }
             }
@@ -1120,6 +1194,35 @@ footer:hover{
                     }
                 }
             }
+        }
+    }
+}
+
+//adaptive for ipad
+
+@media only screen and (min-height : 900px){
+    main{
+        .text{
+            h2{
+                margin-top: 20%;
+            }
+        }
+        .about-us{
+            margin-top: -10%;
+        }
+    }
+}
+@media only screen and (min-height : 1100px){
+    main{
+        .about-us{
+            margin-top: -40%;
+        }
+    }
+}
+@media only screen and (min-height : 1300px){
+    main{
+        .about-us{
+            margin-top: -50%;
         }
     }
 }
