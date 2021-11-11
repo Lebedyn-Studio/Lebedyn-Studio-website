@@ -50,7 +50,7 @@ header .all-header-content nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-basis: 70%;
+  flex-basis: 65%;
   font-size: 12pt;
   font-weight: 600;
   text-transform: uppercase;
@@ -166,7 +166,7 @@ main .header-img {
 }
 main .text {
   font-family: "Lato", sans-serif;
-  height: 90vh;
+  height: 100%;
   width: 100%;
   font-size: 32pt;
   color: #fcefee;
@@ -176,8 +176,13 @@ main .text {
   align-items: center;
 }
 main .text h2 {
-  margin-top: 15%;
+  margin-top: 35%;
   font-family: "Comfortaa", cursive;
+  background: url(/css/source/animate-background1.jpg);
+  background-size: 100%;
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: animation 10s infinite linear;
 }
 main .text h6 {
   margin: 0;
@@ -200,22 +205,75 @@ main .text .header-info {
   opacity: 0.9;
   text-shadow: 1px 1px 2px #000;
 }
-main .text button {
-  background-color: #1d2026;
-  color: #fcefee;
-  padding: 1% 3%;
-  margin-top: 2%;
+main .text .button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #88bef5;
   text-transform: uppercase;
-  border: 2px solid #88bef5;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.1s;
+  margin-top: 2%;
 }
-main .text button:hover {
-  background-color: #88bef5;
-  color: #0e0b0b;
-  border: 2px solid #0e0b0b;
-  box-shadow: 0px 0px 10px 5px #88bef5;
+main .text .button span {
+  position: absolute;
+  display: block;
+}
+main .text .button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #88bef5);
+}
+main .text .button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #88bef5);
+}
+main .text .button span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg, transparent, #88bef5);
+}
+main .text .button span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #88bef5);
+}
+main .text .button:hover {
+  color: #255784;
+  background: #88bef5;
+  box-shadow: 0 0 10px #88bef5, 0 0 40px #88bef5, 0 0 80px #88bef5;
+  transition-delay: 1s;
+}
+main .text .button:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+main .text .button:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+main .text .button:hover span:nth-child(3) {
+  right: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+main .text .button:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
 }
 main .about-us {
   margin-top: 20%;
@@ -223,9 +281,8 @@ main .about-us {
 main .about-us .image-section {
   justify-content: center;
   width: 90%;
-}
-main .about-us .image-section .image-block:first-child {
-  margin-left: 10%;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 main .about-us:hover .article hr {
   width: 30%;
@@ -605,16 +662,13 @@ footer:hover .article hr {
     padding-top: 3%;
   }
   main .text h2 {
-    font-size: 36px;
-  }
-  main .text h2 {
-    font-size: 30px;
+    margin-top: 20%;
   }
   main .text .header-info {
     font-size: 26px;
   }
-  main .text button {
-    padding: 2%;
+  main .text .button {
+    padding: 1.5% 3%;
     font-size: 20px;
   }
   main .about-us {
@@ -661,6 +715,8 @@ footer:hover .article hr {
 
   main .text h2 {
     margin-top: 25%;
+    font-size: 32pt;
+    color: #fcefee;
   }
   main .text h6 {
     color: #88bef5;
@@ -671,8 +727,8 @@ footer:hover .article hr {
   main .text .header-info {
     color: gray;
   }
-  main .text button {
-    padding: 3% 5%;
+  main .text .button {
+    padding: 2% 5%;
   }
   main .header-img {
     display: none;
@@ -764,6 +820,11 @@ footer:hover .article hr {
   }
   footer .all-content h4 {
     margin-top: 7%;
+  }
+
+  footer .all-content .second-section .column .image-block:hover .image-section-text {
+    right: 0;
+    left: 30%;
   }
 }
 @media (max-width: 720px) {
@@ -883,7 +944,7 @@ footer:hover .article hr {
     margin-top: 10%;
     color: gray;
   }
-  main button {
+  main .button {
     display: none;
   }
   main .about-us {
@@ -891,13 +952,13 @@ footer:hover .article hr {
   }
   main .about-us .image-section {
     flex-direction: column;
-    margin-right: 15%;
-    margin-left: 15%;
-    width: 70%;
+    justify-content: center;
+    align-items: center;
   }
   main .about-us .image-section .image-block {
-    width: 100%;
+    width: 50%;
     margin-left: 0;
+    margin-right: 0;
     margin-bottom: 10%;
   }
   main .about-us .image-section .image-block:first-child {
@@ -912,11 +973,21 @@ footer:hover .article hr {
   main .our-work .work-all .work-block .another-block .image-section {
     padding-top: 5%;
   }
+  main .our-work .work-all .work-block .another-block .image-section img {
+    width: 50%;
+  }
   main .our-work .work-all .work-block .another-block .text-section {
     width: 80%;
+    padding-right: 0;
+    margin: 5% 0%;
+    text-align: center;
   }
   main .our-work .work-all .work-block .another-block {
     margin-bottom: 2%;
+  }
+  main .our-work .work-all .work-block:hover .another-block {
+    transform: translate3d(5px, -5px, 0);
+    box-shadow: 5px 5px 0 #0e0b0b;
   }
   main .our-team .image-section {
     flex-direction: column;
@@ -937,9 +1008,18 @@ footer:hover .article hr {
     margin-right: 7%;
     margin-left: 5%;
   }
+  main .our-blog .blog-all .blog-block:hover .blog {
+    transform: translate3d(0px, 0px, 0);
+    box-shadow: 5px 5px 0 #0e0b0b;
+  }
 
   footer .all-content .second-section .column .image-block:first-child {
     margin-left: 5%;
+  }
+
+  footer .all-content .second-section .column .image-block:hover .image-section-text {
+    right: 0;
+    left: 30%;
   }
 }
 @media (max-width: 620px) {
@@ -953,22 +1033,73 @@ footer:hover .article hr {
     width: 93%;
     padding: 5%;
   }
+
+  footer .all-content .second-section .column .image-block:hover .image-section-text {
+    right: 0;
+    left: 30%;
+  }
+}
+@media (max-width: 420px) {
+  main .text h2 {
+    display: none;
+  }
+  main .text h6 {
+    margin-top: 30%;
+  }
+
+  footer .all-content .second-section .column .image-block:hover .image-section-text {
+    right: 0;
+    left: 25%;
+  }
+}
+@media (max-width: 376px) {
+  main .about-us .image-section .image-block {
+    width: 80%;
+  }
+
+  .main .about-us .image-section .image-block {
+    width: 90%;
+  }
+
+  footer .all-content .second-section .column .image-block:hover .image-section-text {
+    right: 0;
+    left: 20%;
+  }
+}
+@media (max-width: 321px) {
+  footer .all-content .second-section .column .image-block:hover .image-section-text {
+    right: 0;
+    left: 15%;
+  }
 }
 @media only screen and (min-height: 900px) {
   main .text h2 {
-    margin-top: 20%;
+    margin-top: 60%;
   }
   main .about-us {
-    margin-top: -10%;
+    margin-top: 20%;
+  }
+}
+@media (max-width: 1025px) {
+  main .text h2 {
+    margin-top: 20%;
   }
 }
 @media only screen and (min-height: 1100px) {
   main .about-us {
-    margin-top: -40%;
+    margin-top: 40%;
   }
 }
-@media only screen and (min-height: 1300px) {
+@media only screen and (min-height: 1400px) {
   main .about-us {
-    margin-top: -50%;
+    margin-top: 50%;
+  }
+}
+@keyframes animation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
   }
 }
