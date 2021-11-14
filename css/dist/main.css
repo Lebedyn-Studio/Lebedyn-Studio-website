@@ -836,7 +836,7 @@ footer:hover .article hr {
     align-items: center;
     position: relative;
     width: 100%;
-    height: 60px;
+    height: 80px;
   }
   header .all-header-adaptive-content .logo {
     font-size: 18pt;
@@ -850,7 +850,7 @@ footer:hover .article hr {
   header .all-header-adaptive-content .nav-toggle {
     position: absolute;
     width: 25px;
-    top: 12px;
+    top: 22px;
     right: 25px;
     padding: 15px 0;
     cursor: pointer;
@@ -899,28 +899,39 @@ footer:hover .article hr {
   }
   header .all-header-adaptive-content nav {
     display: none;
-  }
-  header .all-header-adaptive-content nav .main-list {
-    margin-top: 40%;
-    margin-left: 20%;
+    position: absolute;
+    top: 0;
+    right: 0%;
+    background-color: #88bef5;
+    width: 50%;
+    margin-top: 80px;
   }
   header .all-header-adaptive-content nav .main-list ul {
+    padding-left: 0;
+    margin: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   header .all-header-adaptive-content nav .main-list ul li {
-    margin-bottom: 15%;
+    width: 100%;
+    padding: 8% 0;
+    border-bottom: 1px solid #0e0b0b;
+    text-align: center;
   }
   header .all-header-adaptive-content nav .main-list ul li a {
     color: #0e0b0b;
-    font-size: 20pt;
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
+    text-decoration: none;
   }
   header .all-header-adaptive-content nav .main-list ul li a:hover {
     color: #fcefee;
+  }
+  header .all-header-adaptive-content nav .main-list ul li:first-child {
+    border-top: 1px solid #0e0b0b;
   }
 
   main .header-img {
@@ -1045,6 +1056,9 @@ footer:hover .article hr {
   }
   main .text h6 {
     margin-top: 30%;
+  }
+  main .text .button {
+    padding: 3% 5%;
   }
 
   footer .all-content .second-section .column .image-block:hover .image-section-text {
