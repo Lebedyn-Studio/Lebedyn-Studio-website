@@ -1147,26 +1147,26 @@ main .header-text .decription {
   width: 30%;
   margin-top: 0.5%;
 }
-main .section-our-history {
+main .our-history {
   width: 100%;
   margin-top: 35%;
   position: relative;
   z-index: 1;
 }
-main .section-our-history svg {
+main .our-history svg {
   margin-bottom: -1%;
 }
-main .section-our-history .article {
+main .our-history .article {
   margin-top: -5%;
   background-color: #88bef5;
   color: #151a21;
 }
-main .section-our-history .article hr {
+main .our-history .article hr {
   background-color: #0e0b0b;
   border-color: #0e0b0b;
   height: 1px;
 }
-main .section-our-history .section-content {
+main .our-history .section-content {
   background-color: #88bef5;
   padding-bottom: 25%;
   padding-top: 8%;
@@ -1174,22 +1174,22 @@ main .section-our-history .section-content {
   justify-content: space-around;
   align-items: center;
 }
-main .section-our-history .section-content .image-section {
+main .our-history .section-content .image-section {
   flex-basis: 30%;
   position: relative;
 }
-main .section-our-history .section-content .image-section .image {
+main .our-history .section-content .image-section .image {
   transition: all 0.2s linear;
   cursor: pointer;
   background: linear-gradient(to right, #8e2de2, #4a00e0);
   border-radius: 10px;
 }
-main .section-our-history .section-content .image-section .image img {
+main .our-history .section-content .image-section .image img {
   width: 100%;
   border-radius: 10px;
   height: 100%;
 }
-main .section-our-history .section-content .image-section .image-section-text {
+main .our-history .section-content .image-section .image-section-text {
   cursor: pointer;
   color: #fcefee;
   text-transform: uppercase;
@@ -1203,23 +1203,23 @@ main .section-our-history .section-content .image-section .image-section-text {
   transition: opacity 0.2s linear;
   transition: transform 0.2s linear;
 }
-main .section-our-history .section-content .image-section .image-section-text i {
+main .our-history .section-content .image-section .image-section-text i {
   font-size: 20pt;
   margin-bottom: 5%;
 }
-main .section-our-history .section-content .image-section:hover .image {
+main .our-history .section-content .image-section:hover .image {
   box-shadow: 10px 10px 0 #88bef5;
   transform: translate3d(10px, -20px, 0);
 }
-main .section-our-history .section-content .image-section:hover .image img {
+main .our-history .section-content .image-section:hover .image img {
   opacity: 0.3;
   box-shadow: -10px 10px 15px #0e0b0b;
 }
-main .section-our-history .section-content .image-section:hover .image-section-text {
+main .our-history .section-content .image-section:hover .image-section-text {
   opacity: 1;
   transform: translate3d(10px, -20px, 0);
 }
-main .section-our-history .section-content .section-aside-text {
+main .our-history .section-content .section-aside-text {
   flex-basis: 30%;
   font-size: 16pt;
   text-align: center;
@@ -1229,24 +1229,55 @@ main .section-our-history .section-content .section-aside-text {
   background-color: #1d2026;
   transition: all 0.2s;
 }
-main .section-our-history .section-content .section-aside-text h3 {
+main .our-history .section-content .section-aside-text h3 {
   color: #fcefee;
   text-align: center;
 }
-main .section-our-history .section-content .section-aside-text .gray-text {
+main .our-history .section-content .section-aside-text .gray-text {
   color: gray;
 }
-main .section-our-history .section-content .section-aside-text:hover {
+main .our-history .section-content .section-aside-text:hover {
   transform: translate3d(10px, -20px, 0);
   box-shadow: -5px 5px 15px #0e0b0b;
 }
-main .section-our-team {
+main .our-history:hover .article hr {
+  width: 30%;
+}
+main .our-team {
   margin-top: -20%;
   position: relative;
   z-index: 2;
 }
-main .section-our-team .article {
+main .our-team .article {
   background-color: #20232a;
   margin-top: -1%;
   padding-bottom: 5%;
+}
+main .our-team .author-block .image-section {
+  background-color: #20232a;
+  margin: 0;
+  padding-top: 5%;
+}
+main .our-team .author-block .image-section .image-block .image-section-text {
+  transform: translate3d(10px, -10px, 0);
+}
+main .our-team .author-block .image-section .image-block:hover .image {
+  transform: translate3d(10px, -10px, 0);
+}
+main .our-team .author-block .image-text-section {
+  background-color: #20232a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .our-team .author-block .image-text-section h2 {
+  margin-top: 0;
+  color: #88bef5;
+  width: 80%;
+  text-align: center;
+}
+main .our-team .author-block .image-text-section .aside-text {
+  color: gray;
+  width: 80%;
+  text-align: center;
 }
