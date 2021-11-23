@@ -1181,7 +1181,7 @@ main .our-history .section-content .image-section {
 main .our-history .section-content .image-section .image {
   transition: all 0.2s linear;
   cursor: pointer;
-  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  background: linear-gradient(45deg, #30cfd0, #330867);
   border-radius: 10px;
 }
 main .our-history .section-content .image-section .image img {
@@ -1212,7 +1212,7 @@ main .our-history .section-content .image-section:hover .image {
   transform: translate3d(10px, -20px, 0);
 }
 main .our-history .section-content .image-section:hover .image img {
-  opacity: 0.3;
+  opacity: 0.2;
   box-shadow: -10px 10px 15px #0e0b0b;
 }
 main .our-history .section-content .image-section:hover .image-section-text {
@@ -1276,8 +1276,42 @@ main .our-team .author-block .image-text-section h2 {
   width: 80%;
   text-align: center;
 }
-main .our-team .author-block .image-text-section .aside-text {
+main .our-team .author-block .image-text-section .another-aside-text {
+  display: flex;
+  justify-content: center;
+}
+main .our-team .author-block .image-text-section .another-aside-text .aside-text {
+  width: 75%;
   color: gray;
-  width: 80%;
   text-align: center;
+  background-color: #151a21;
+  padding: 3%;
+  border-radius: 10px;
+  transition: all 0.1s;
+}
+main .our-team .author-block .image-text-section .another-aside-text .aside-text a {
+  color: #30cfd0;
+  text-transform: uppercase;
+}
+main .our-team .author-block .another-aside-text:hover .aside-text {
+  transform: translate3d(10px, -10px, 0);
+  box-shadow: -5px 5px 15px #0e0b0b;
+}
+main .our-team .author-block:last-child .image-text-section {
+  padding-bottom: 25%;
+}
+main .other-team {
+  margin-top: -20%;
+  position: relative;
+  z-index: 3;
+}
+main .other-team .article {
+  background-color: #88bef5;
+  margin-top: -1%;
+  color: #0e0b0b;
+}
+main .other-team .article hr {
+  background-color: #0e0b0b;
+  border-color: #0e0b0b;
+  height: 1px;
 }
