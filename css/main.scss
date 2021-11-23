@@ -1532,7 +1532,7 @@ main{
                 .image{
                     transition: all 0.2s linear;
                     cursor: pointer;
-                    background: linear-gradient(to right, rgb(142, 45, 226), rgb(74, 0, 224));
+                    background: linear-gradient(45deg, #30cfd0, #330867);
                     border-radius: 10px;
                     img{
                         width: 100%;
@@ -1564,7 +1564,7 @@ main{
                     box-shadow: 10px 10px 0 $header-color;
                     transform: translate3d(10px, -20px,0);
                     img{
-                        opacity: .3;
+                        opacity: .2 ;
                         box-shadow: -10px 10px 15px $first-text-color;
                     }
                 }
@@ -1642,11 +1642,52 @@ main{
                     width: 80%;
                     text-align: center;
                 }
-                .aside-text{
-                    color: gray;
-                    width: 80%;
-                    text-align: center;
+                .another-aside-text{
+                    display: flex;
+                    justify-content: center;
+                    .aside-text{
+                        width: 75%;
+                        color: gray;
+                        text-align: center;
+                        background-color: $main-background-color;
+                        padding: 3%;
+                        border-radius: 10px;
+                        transition: all 0.1s;
+                        a{
+                            color: $third-text-color;
+                            text-transform: uppercase;
+                        }
+                    }
                 }
+            }
+            .another-aside-text:hover{
+                .aside-text{
+                    transform: translate3d(10px, -10px,0);
+                    box-shadow: -5px 5px 15px $first-text-color;
+                }
+            }
+        }
+        .author-block:last-child{
+            .image-text-section{
+                padding-bottom: 25%;
+            }
+        }
+    }
+
+    //third section
+
+    .other-team{
+        margin-top: -20%;
+        position: relative;
+        z-index: 3;
+        .article{
+            background-color: $header-color;
+            margin-top: -1%;
+            color: $first-text-color;
+            hr{
+                background-color: $first-text-color;
+                border-color: $first-text-color;
+                height: 1px;
             }
         }
     }
