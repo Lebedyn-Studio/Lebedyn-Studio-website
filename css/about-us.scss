@@ -10,6 +10,24 @@ $first-text-color: #0e0b0b;
 $second-text-color: #fcefee;
 $third-text-color: #30cfd0;
 
+//header
+
+header{
+    .all-header-content{
+        nav{
+            .main-list{
+                margin-left: -15%;
+                ul{
+                    li{
+                        a{
+                            white-space: nowrap;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 //main content
 
@@ -58,6 +76,7 @@ main{
         }
         .article{
             margin-top: -5%;
+            margin-bottom: -1%;
             background-color: $header-color;
             color: $main-background-color;
             hr{
@@ -232,6 +251,7 @@ main{
         .article{
             background-color: $header-color;
             margin-top: -1%;
+            margin-bottom: -1%;
             color: $first-text-color;
             hr{
                 background-color: $first-text-color;
@@ -320,5 +340,232 @@ footer{
     .conclusion{
         background-color: $main-background-color;
         margin-top: -3%;
+    }
+}
+
+//adaptive
+
+//for 1024px
+
+@media (max-width: 1025px) {
+    main{
+        .our-history{
+            margin-top: 50%;
+        }
+    }
+}
+
+//for 820px
+
+@media(max-width: 820px){
+    main{
+        .our-history{
+            .section-content{
+                .image-section{
+                    flex-basis: 35%;
+                }
+                .section-aside-text{
+                    flex-basis: 50%;
+                }
+            }
+        }
+        .our-team{
+            .image-section{
+                .image-block{
+                    flex-basis: 50%;
+                }
+            }
+        }
+        .other-team{
+            .team-all-content{
+                .teammate{
+                    .image-block{
+                        img{
+                            height: 300px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//for 720px
+
+@media(max-width: 721px){
+    .article{
+        .first-string{
+            font-size: 32pt;
+        }
+    }
+    main{
+        .header-text{
+            h1{
+                font-size: 32pt;
+            }
+            .decription{
+                font-size: 24pt;
+                width: 80%;
+                margin-top: 5%;
+            }
+        }
+        .our-history{
+            margin-top: 70%;
+            .section-content{
+                flex-direction: column;
+                .image-section{
+                    width: 50%;
+                }
+                .section-aside-text{
+                    width: 90%;
+                    margin-top: 5%;
+                }
+            }
+        }
+        .our-team{
+            .author-block{
+                .image-section{
+                    .image-block{
+                        .under-image-text{
+                            h6{
+                                font-size: 32pt;
+                            }
+                            p{
+                                font-size: 28pt;
+                            }
+                        }
+                    }
+                }
+                .image-text-section{
+                    .another-aside-text{
+                        .aside-text{
+                            font-size: 20pt;
+                        }
+                    }
+                }
+            }
+        }
+        .other-team{
+            .article{
+                .second-string{
+                    font-size: 24pt;
+                }
+            }
+            .team-all-content{
+                .teammate{
+                    .text-block{
+                        .text{
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//for 620px
+
+@media(max-width: 621px){
+    main{
+        .our-history{
+            margin-top: 90%;
+        }
+        .other-team{
+            .team-all-content{
+                .teammate{
+                    flex-direction: column;
+                    .image-block{
+                        margin-bottom: 10%;
+                    }
+                    .text-block{
+                        text-align: center;
+                        width: 90%;
+                    }
+                }
+                .teammate:nth-child(2){
+                    .image-block{
+                        order: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//for 520px
+
+@media(max-width: 521px){
+    main{
+        .our-history{
+            margin-top: 110%;
+        }
+        .other-team{
+            .article{
+                .second-string{
+                    width: 80%;
+                    text-align: center;
+                }
+            }
+            .team-all-content{
+                .teammate{
+                    .image-block{
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//for 420px
+
+@media(max-width: 421px){
+    main{
+        .our-history{
+            margin-top: 130%;
+        }
+    }
+}
+
+//for 380px
+
+@media(max-width: 380px){
+    main{
+        .our-history{
+            .article{
+                margin-top: -2%;
+            }
+        }
+        .our-team{
+            .article{
+                margin-top: -2%;
+            }
+            .author-block{
+                    .image-text-section{
+                        .aside-text{
+                            display: none;
+                        }
+                    }
+            }
+        }
+        .other-team{
+            .article{
+                margin-top: -2%;
+            }
+        }
+    }
+}
+
+@media(max-width: 320px){
+    main{
+        .header-text{
+            h1{
+                width: 90%;
+            }
+        }
+        .our-history{
+            margin-top: 170%;
+        }
     }
 }
